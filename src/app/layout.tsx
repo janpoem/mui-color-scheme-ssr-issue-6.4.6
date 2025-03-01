@@ -1,5 +1,6 @@
 import MuiWrapper from '@/MuiWrapper';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
@@ -45,6 +46,7 @@ export default function RootLayout({
           </MuiWrapper>
         </AppRouterCacheProvider>
         {process.env.NODE_ENV === 'production' && <SpeedInsights />}
+        <Analytics mode="production" />
       </body>
     </html>
   );
