@@ -1,7 +1,9 @@
 import MuiWrapper from '@/MuiWrapper';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+import './global.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -38,8 +40,11 @@ export default function RootLayout({
               __html: `(${loadColorScheme.toString()})()`,
             }}
           />
-          <MuiWrapper>{children}</MuiWrapper>
+          <MuiWrapper>
+            <main className={'AppRoot'}>{children}</main>
+          </MuiWrapper>
         </AppRouterCacheProvider>
+        {process.env.NODE_ENV === 'production' && <SpeedInsights />}
       </body>
     </html>
   );

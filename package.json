@@ -1,16 +1,14 @@
 {
   "name": "mui-color-scheme-ssr-issue",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "biome lint ./src"
   },
-  "dependencies": {
-    "@mui/material-nextjs": "^6.4.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@emotion/cache": "^11.14.0",
@@ -19,6 +17,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.6",
     "@mui/material": "^6.4.6",
+    "@mui/material-nextjs": "^6.4.3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -28,6 +27,7 @@
     "react-dom": "^19.0.0",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "usehooks-ts": "^3.1.1"
+    "usehooks-ts": "^3.1.1",
+    "@vercel/speed-insights": "^1.2.0"
   }
 }
