@@ -1,20 +1,34 @@
 import { createTheme } from '@mui/material';
+import { blue, blueGrey, green } from '@mui/material/colors';
 
 export default createTheme({
   cssVariables: {
     colorSchemeSelector: 'data',
   },
   colorSchemes: {
-    dark: true,
+    dark: {
+      palette: {
+        primary: {
+          main: blue.A700,
+        },
+        secondary: {
+          main: blueGrey.A700,
+        },
+        success: {
+          main: green['800'],
+        },
+      },
+    },
   },
   palette: {
     primary: {
-      main: '#2977b3',
-      dark: '#87251e',
-      light: '#87251e',
+      main: blue['500'],
     },
     secondary: {
-      main: '#084d2e',
+      main: blueGrey['500'],
+    },
+    success: {
+      main: green['600'],
     },
   },
   typography: {
